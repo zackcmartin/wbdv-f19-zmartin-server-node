@@ -1,7 +1,7 @@
 
-var students = require('../data/students.json');
-var questions = require('../data/questions.json');
-var answers = require('../data/answers.json');
+var students = require('../students.json');
+var questions = require('../questions.json');
+var answers = require('../answers.json');
 
 //Student functions
 
@@ -100,7 +100,7 @@ function findAnswersByStudentsQuestions(sid, qid) {
 	return answers.filter(answer => (answer.student == sid && answer.question == qid))
 }
 
-function createAnswer(answer) {
+function answerQuestion(studentId, questionId, answer) {
 	answers.push(answer);
 	return answers;
 }
@@ -123,5 +123,5 @@ module.exports = {
 	findAnswersByQuestion,
 	findAnswersByStudent,
 	findAnswersByStudentsQuestions,
-	createAnswer
+	answerQuestion
 };

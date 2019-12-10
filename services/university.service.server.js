@@ -7,7 +7,7 @@ app.use(bodyParser.json())
 
 app.listen('4000')
 
-var universityDao = require('./daos/university.dao.server.js')
+var universityDao = require('../data/daos/university.dao.server.js')
 
 
 //Student calls
@@ -105,7 +105,7 @@ function createAnswer(req, res) {
 	answer['student'] = sid;
 	answer['question'] = qid;
 	res.json(
-		universityDao.createAnswer(answer)
+		universityDao.answerQuestion(sid, qid, answer)
 	)
 }
 
