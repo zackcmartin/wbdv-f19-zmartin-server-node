@@ -18,7 +18,7 @@ function createStudent(req, res) {
 }
 
 function deleteStudent(req, res) {
-	var sid = req.params['sid'];
+	var sid = req.params['id'];
 	res.json(universityDao.deleteStudent(sid))
 }
 
@@ -28,12 +28,12 @@ function findAllStudents(req, res) {
 
 function findStudentById(req, res) {
 	res.json(
-		universityDao.findStudentById(req.params['sid'])
+		universityDao.findStudentById(req.params['id'])
 	)
 }
 
 function updateStudent(req, res) {
-	var studentId = req.params['sid'];
+	var studentId = req.params['id'];
 	var studentUpdates = req.body
 	res.json(universityDao.updateStudent(studentId, studentUpdates))
 }
@@ -53,18 +53,18 @@ function findAllQuestions(req, res) {
 }
 function findQuestionById(req, res) {
 	res.json(
-		universityDao.findQuestionById(req.params['qid'])
+		universityDao.findQuestionById(req.params['id'])
 	)
 }
 
 function updateQuestion(req, res) {
-	var questionId = req.params['qid'];
+	var questionId = req.params['id'];
 	var questionUpdates = req.body
 	res.json(universityDao.updateQuestion(questionId, questionUpdates))
 }
 
 function deleteQuestion(req, res) {
-	var qid = req.params['qid'];
+	var qid = req.params['id'];
 	res.json(universityDao.deleteQuestion(qid))
 }
 
