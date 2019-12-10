@@ -1,7 +1,7 @@
 
-var students = require('../students.json');
-var questions = require('../questions.json');
-var answers = require('../answers.json');
+ var students = require('../students.json');
+ var questions = require('../questions.json');
+ var answers = require('../answers.json');
 
 //Student functions
 
@@ -29,6 +29,7 @@ function findStudentById(sid) {
 function updateStudent(studentId, studentUpdates) {
 	var index = students.findIndex(student => student._id == studentId)
 	if (index != -1) {
+		studentUpdates['_id'] = parseInt(studentId);
 		students.splice(index, 1)
 		students.push(studentUpdates)
 		return students;
@@ -56,6 +57,7 @@ function findQuestionById(qid) {
 function updateQuestion(questionId, questionUpdates) {
 	var index = questions.findIndex(question => question._id == questionId)
 	if (index != -1) {
+		questionUpdates['_id'] = parseInt(questionId);
 		questions.splice(index, 1)
 		questions.push(questionUpdates)
 		return questions;
