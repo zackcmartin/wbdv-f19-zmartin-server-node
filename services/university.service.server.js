@@ -116,16 +116,16 @@ function createAnswer(req, res) {
 //Student
 app.post("/api/student", createStudent); //
 app.get("/api/student", findAllStudents); //
-app.get("/api/student/:sid", findStudentById); //
-app.put('/api/student/:sid', updateStudent); //
-app.delete("/api/student/:sid", deleteStudent); //
+app.get("/api/student/:id", findStudentById); //
+app.put('/api/student/:id', updateStudent); //
+app.delete("/api/student/:id", deleteStudent); //
 
 //Questions
 app.post("/api/question", createQuestion); //
 app.get("/api/question", findAllQuestions); //
-app.get("/api/question/:qid", findQuestionById); //
-app.put("/api/question/:qid", updateQuestion); //
-app.delete("/api/question/:qid", deleteQuestion);
+app.get("/api/question/:id", findQuestionById); //
+app.put("/api/question/:id", updateQuestion); //
+app.delete("/api/question/:id", deleteQuestion);
 
 //Answers
 app.get("/api/answer", findAllAnswers); 

@@ -22,8 +22,8 @@ function deleteStudent(sid) {
 function findAllStudents() {
 	return students;
 }
-function findStudentById(sid) {
-	return students.find(student => student._id == sid)
+function findStudentById(id) {
+	return students.find(student => student._id == id)
 }
 
 function updateStudent(studentId, studentUpdates) {
@@ -51,8 +51,8 @@ function createQuestion(question) {
 function findAllQuestions() {
 	return questions;
 }
-function findQuestionById(qid) {
-	return questions.find(question => question._id == qid)
+function findQuestionById(id) {
+	return questions.find(question => question._id == id)
 }
 function updateQuestion(questionId, questionUpdates) {
 	var index = questions.findIndex(question => question._id == questionId)
@@ -85,17 +85,17 @@ function findAllAnswers() {
 	return answers;
 }
 
-function findAnswerById(aid) {
-	return answers.find(answer => answer._id == aid)
+function findAnswerById(id) {
+	return answers.find(answer => answer._id == id)
 }
 
-function findAnswersByQuestion(qid) {
-	return answers.filter(answer => answer.question == qid)
+function findAnswersByQuestion(questionId) {
+	return answers.filter(answer => answer.question == questionId)
 }
 
 
-function findAnswersByStudent(sid) {
-	return answers.filter(answer => answer.student == sid)
+function findAnswersByStudent(studentId) {
+	return answers.filter(answer => answer.student == studentId)
 }
 
 function findAnswersByStudentsQuestions(sid, qid) {
