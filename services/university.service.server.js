@@ -128,7 +128,7 @@ app.put("/api/question/:id", updateQuestion); //
 app.delete("/api/question/:id", deleteQuestion);
 
 //Answers
-app.get("/api/answer", findAllAnswers); 
+app.get("/api/answer", findAllAnswers);
 app.get("/api/answer/:aid", findAnswerById);
 app.get("/api/question/:qid/answer", findAnswersByQuestion);
 app.get("/api/student/:sid/answer", findAnswersByStudent);
