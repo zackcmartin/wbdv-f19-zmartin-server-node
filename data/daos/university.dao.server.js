@@ -40,7 +40,6 @@ function updateStudent(studentId, studentUpdates) {
 }
 
 
-
 //Question functions
 
 
