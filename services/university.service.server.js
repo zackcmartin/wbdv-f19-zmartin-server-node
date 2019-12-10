@@ -16,13 +16,16 @@ function createStudent(req, res) {
 	var student = req.body;
 	res.json(universityDao.createStudent(student))
 }
+
 function deleteStudent(req, res) {
 	var sid = req.params['sid'];
 	res.json(universityDao.deleteStudent(sid))
 }
+
 function findAllStudents(req, res) {
 	res.json(universityDao.findAllStudents());
 }
+
 function findStudentById(req, res) {
 	res.json(
 		universityDao.findStudentById(req.params['sid'])
